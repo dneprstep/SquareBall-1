@@ -44,10 +44,17 @@ public class SphereControl : MonoBehaviour {
 			Collider[] magnetZone = Physics.OverlapSphere (this.transform.position, magnetRadius);
 
 			for (int i=0; i<magnetZone.Length; i++) {
-				if ( magnetZone [i].gameObject.tag == "Cubes" ) {
+				if ( magnetZone [i].gameObject.tag == "Cubes" ) 
+				{
 					Vector3 direction = new Vector3 ();
+
+//					SpringJoint joint = gameObject.AddComponent<SpringJoint>();
+//					joint.connectedBody=magnetZone [i].gameObject.GetComponent<Rigidbody> ();
+
 					direction = this.transform.position - magnetZone [i].transform.position;
-					magnetZone [i].gameObject.GetComponent<Rigidbody> ().AddForce (direction * magnetPower);
+					magnetZone [i].gameObject.GetComponent<Rigidbody> ().velocity = direction * magnetPower;
+//					magnetZone [i].gameObject.GetComponent<Rigidbody> ().AddForce (direction * magnetPower/10);
+
 				}
 			}
 		}
