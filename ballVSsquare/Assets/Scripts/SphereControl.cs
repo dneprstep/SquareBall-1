@@ -74,13 +74,14 @@ public class SphereControl : MonoBehaviour {
 			magnetZone=System.Array.FindAll(magnetZone,(Collider item)
 			                                =>
 			                                {
-				if(item.gameObject.tag=="Cubes" && item.gameObject.GetComponent<SpringJoint>())
+				if(item.gameObject.tag=="Cubes")
 					return true;
 				else
 					return false;
 			});
 
-			foreach (var item in magnetZone) {
+			foreach (var item in magnetZone) 
+			{
 				item.GetComponent<SpringJoint>().connectedBody=null;
 				item.GetComponent<SpringJoint>().spring=0;
 				item.attachedRigidbody.AddExplosionForce(explosivePower,this.gameObject.transform.position,explosiveRadius);
@@ -119,18 +120,19 @@ public class SphereControl : MonoBehaviour {
 			magnetZone=System.Array.FindAll(magnetZone,(Collider item)
 			                     =>
 			                     {
-				if(item.GetComponent<SpringJoint>())
-					if(item.gameObject.tag=="Cubes" && item.GetComponent<SpringJoint>().spring==0)
+				if(item.gameObject.tag=="Cubes")
+					if(item.GetComponent<SpringJoint>() && item.GetComponent<SpringJoint>().connectedBody==null)
 						return true;
 					else
 						return false;
 				else
-				return false;
+					return false;
 			});
 
 			foreach (var item in magnetZone) {
 				direction=(transform.position-item.transform.position).normalized;
-				item.gameObject.GetComponent<Rigidbody>().velocity=direction * magnetPower;
+				Debug.Log((direction*magnetPower));
+				item.gameObject.GetComponent<Rigidbody>().AddForce(direction * magnetPower);
 			}
 
 /*			for (int i=0; i<magnetZone.Length; i++) 
