@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SphereControl : MonoBehaviour {
 
@@ -14,13 +15,17 @@ public class SphereControl : MonoBehaviour {
 	public float explosiveRadius;
 	public float turnOffMagnetTime;
 
-
+	Collider [] magnetZone;
+	Vector3 explosivePos;
 	Rigidbody rb;
+	Vector3 direction;
 
 	void Start () {
 		power = gameObject.GetComponent<Rigidbody> ();
 		HorizontalForce = new Vector3 (forcePower, 0.0f, 0.0f);
 		VerticalForce = new Vector3 (0.0f, 0.0f, forcePower);	
+		direction = new Vector3 ();
+//		magnetZone = new HashSet<Collider> ();
 	}
 	
 
@@ -29,9 +34,12 @@ public class SphereControl : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.M))
 		{
 			isMagnet=false;
-			GameObject[] allCubes =  GameObject.FindGameObjectsWithTag("Cubes");
-			foreach (var item in allCubes) {
-				Destroy(item.GetComponent<SpringJoint>());
+			Collider[] nearCollider = Physics.OverlapSphere(transform.position,magnetRadius);
+//			GameObject[] allCubes =  GameObject.FindGameObjectsWithTag("Cubes");
+			foreach (var item in nearCollider) 
+			{
+				if(item.gameObject.tag=="Cubes")
+					item.GetComponent<SpringJoint>().spring=0;
 			}
 			Invoke ("TurnOnMagnet", turnOffMagnetTime);
 		}
@@ -60,40 +68,85 @@ public class SphereControl : MonoBehaviour {
 		
 		if ((key = Input.GetAxis ("Jump")) != 0) 
 		{
-			Vector3 explosivePos=transform.position;
+
+			magnetZone = Physics.OverlapSphere (this.transform.position, magnetRadius);
+			
+			magnetZone=System.Array.FindAll(magnetZone,(Collider item)
+			                                =>
+			                                {
+				if(item.gameObject.tag=="Cubes" && item.gameObject.GetComponent<SpringJoint>())
+					return true;
+				else
+					return false;
+			});
+
+			foreach (var item in magnetZone) {
+				item.GetComponent<SpringJoint>().connectedBody=null;
+				item.GetComponent<SpringJoint>().spring=0;
+				item.attachedRigidbody.AddExplosionForce(explosivePower,this.gameObject.transform.position,explosiveRadius);
+			}
+
+
+
+
+
+/*			explosivePos=transform.position;
 			Collider[] magnetZone = Physics.OverlapSphere (this.transform.position, explosiveRadius);
 
 			foreach (var item in magnetZone)
 			{
 				if ( item.gameObject.tag == "Cubes")
 				{
-					rb=item.GetComponent<Rigidbody>();
-					rb.AddExplosionForce (explosivePower, explosivePos, explosiveRadius);
+					item.GetComponent<SpringJoint>();
+//					rb=item.GetComponent<Rigidbody>();
+//					direction=(this.transform.position-item.transform.position).normalized;
+//					rb.AddForce(direction*explosivePower);
+//					rb.AddExplosionForce (explosivePower, explosivePos, explosiveRadius);
 					Debug.Log ("Add AddExplosionForce to"+item.gameObject.name);
 				}
 			}
-		
+	*/	
 		}
 
 
 
-		if (isMagnet == true) {
+		if (isMagnet == true) 
+		{
 
-			Collider[] magnetZone = Physics.OverlapSphere (this.transform.position, magnetRadius);
+			magnetZone = Physics.OverlapSphere (this.transform.position, magnetRadius);
 
-			for (int i=0; i<magnetZone.Length; i++) {
-				if ( magnetZone [i].gameObject.tag == "Cubes" && !(magnetZone [i].gameObject.GetComponent<SpringJoint>())) 
+
+			magnetZone=System.Array.FindAll(magnetZone,(Collider item)
+			                     =>
+			                     {
+				if(item.GetComponent<SpringJoint>())
+					if(item.gameObject.tag=="Cubes" && item.GetComponent<SpringJoint>().spring==0)
+						return true;
+					else
+						return false;
+				else
+				return false;
+			});
+
+			foreach (var item in magnetZone) {
+				direction=(transform.position-item.transform.position).normalized;
+				item.gameObject.GetComponent<Rigidbody>().velocity=direction * magnetPower;
+			}
+
+/*			for (int i=0; i<magnetZone.Length; i++) 
+			{
+				if ( magnetZone [i].gameObject.tag == "Cubes" && (magnetZone [i].gameObject.GetComponent<SpringJoint>().spring==0)) 
 				{
-					Vector3 direction = new Vector3 ();
+					direction = (this.transform.position - magnetZone [i].transform.position).normalized;
 
-					direction = this.transform.position - magnetZone [i].transform.position;
 //					magnetZone [i].gameObject.GetComponent<Rigidbody> ().velocity = direction * magnetPower;
 					magnetZone [i].gameObject.GetComponent<Rigidbody> ().AddForce (direction * magnetPower);
 					Debug.Log ("Add Force to"+magnetZone[i].gameObject.name);
 
 				}
-			}
+			}*/
 		}
 
 	}
+
 }
