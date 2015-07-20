@@ -71,6 +71,7 @@ public class SphereControl : MonoBehaviour {
 	//	energyRecharge = 1f;
 
 		StartCoroutine ("EnergyFill");
+		StartCoroutine ("sphereConstForce");
 //		StartCoroutine (constVelocityForce());
 
 //		StartCoroutine (deltaPos ());
@@ -89,6 +90,23 @@ public class SphereControl : MonoBehaviour {
 			}
 		}
 	}
+	IEnumerator sphereConstForce()
+	{
+		while (true) 
+		{
+			yield return null;
+			if (sphereRB.velocity.magnitude > maxVelocity) 
+			{
+				Debug.Log ("Max magnitude:" + sphereRB.velocity.magnitude);
+				sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, maxVelocity);
+			} else 
+			{
+				sphereRB.AddForce (constVelocity, ForceMode.Impulse);
+			}
+		}
+
+	}
+
 
 	public void addCollideCube(testJoint collideCube)
 	{
@@ -135,10 +153,10 @@ public class SphereControl : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log ("Energy:" + Energy);
+//		Debug.Log ("Energy:" + Energy);
 		Debug.Log ("Sphere Velocity:" + sphereRB.velocity);
 
-		//max Velocity
+/*		//max Velocity
 		if (sphereRB.velocity.magnitude > maxVelocity) {
 			Debug.Log ("Max magnitude:" + sphereRB.velocity.magnitude);
 			sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, maxVelocity);
@@ -146,7 +164,7 @@ public class SphereControl : MonoBehaviour {
 		{
 			sphereRB.AddForce (constVelocity, ForceMode.Force);
 		}
-
+*/
 
 		touchScan ();
 
