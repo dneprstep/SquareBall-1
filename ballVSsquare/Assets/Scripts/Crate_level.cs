@@ -81,15 +81,30 @@ public class Crate_level : MonoBehaviour {
 
 	void Start () 
 	{
+
 		road = new List<GameObject> ();
 
 		Vector3 tempPosition=startPosition;
 
 		road.Add ((GameObject)Instantiate (roadPrefab, tempPosition, Quaternion.identity));
 
-		for (int i=0; i<roadCount; i++) {
+		for (int i=0; i<roadCount; i++) 
+		{
 			tempPosition = AddRoad (roadPrefab, tempPosition, angle, directionVariables.setVar (rDirection.right));
-	//		Instantiate (enemyPrefab, tempPosition+(new Vector3(0,30,0)), Quaternion.identity);
+			if(i%4==0)
+			{
+				Vector2 tempEnemyPos2= Random.insideUnitCircle*5;
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y,tempPosition.z+tempEnemyPos2.y);
+				Instantiate (enemyPrefab, tempEnemyPos3, Quaternion.Euler (0,-90,0));
+			}
+			if(i%5==0)
+			{
+				Vector2 tempEnemyPos2= Random.insideUnitCircle*6;
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+2f,tempPosition.z+tempEnemyPos2.y);
+				Instantiate (cubePrefab, tempEnemyPos3, Quaternion.identity);
+			}
+
+			//			Instantiate (enemyPrefab, tempPosition+(new Vector3(0,30,0)), Quaternion.identity);
 		}
 
 		tempPosition.y -= 2.5f;
