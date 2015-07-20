@@ -4,251 +4,272 @@ using System.Collections.Generic;
 
 public class SphereControl : MonoBehaviour {
 	
-	public Rigidbody sphereRB;
-	public float forcePower;
-	public float magnetPower;
-	public float magnetRadius;
-	public Vector3 HorizontalForce;
-	public Vector3 VerticalForce;
-	public bool isMagnet;
-	public float explosivePower;
-	public float explosiveRadius;
-	public float turnOffMagnetTime;
-	public int stun_cube_time;
-	public float maxVelocity;
-	public float colliderRadius;
+	Rigidbody sphereRB;
 
-	Collider [] magnetZone;
-	List<GameObject> collideCubes;
+	Vector3 HorizontalForce;
+	Vector3 VerticalForce;
+
+	public bool isMagnet;
+	public float turnOffMagnetTime;
+	public float forcePower;
+	public float maxVelocity;
+	public float cubeUnjointPower;
+
+
+	public Vector3 startPosition;
+	public Vector3 constVelocity;
+
+	public float energyRecharge;
+	public float maxEnergy;
+
+
+	List<testJoint> collideCubes;
+
+
 	Vector3 explosivePos;
 	Rigidbody rb;
-	Vector3 direction;
-	
-	void Start () {
+
+	Transform sphereTransofrm;
+
+	Vector2 touchCoord;
+	Vector2 playerTouch;
+
+	float key;
+
+
+	float Energy;
+
+	float magnetEnergyCost=30;
+	float explEnergyCost=50;
+
+
+	Vector3 tempVelocity;
+
+	void Start () 
+	{
+		transform.position = startPosition;
 		sphereRB = gameObject.GetComponent<Rigidbody> ();
-		collideCubes = new List<GameObject> ();
+		sphereTransofrm = GetComponent<Transform> ();
+
+		collideCubes = new List<testJoint> ();
+
 		HorizontalForce = new Vector3 (forcePower, 0.0f, 0.0f);
-		VerticalForce = new Vector3 (0.0f, 0.0f, forcePower);	
-		direction = new Vector3 ();
+		VerticalForce = new Vector3 (0.0f, 0.0f, forcePower);
+
+//		direction = new Vector3 ();
+//		direction = transform.position;
+		GetComponent<MeshFilter> ().mesh.Optimize ();
+		sphereRB.AddForce(new Vector3(0,0,100),ForceMode.Force);
+		touchCoord = new Vector2 ();
+
+
+//		temp = new Vector3 ();
+
+
+	//	maxEnergy = 100;
+		Energy = maxEnergy;
+	//	energyRecharge = 1f;
+
+		StartCoroutine ("EnergyFill");
+//		StartCoroutine (constVelocityForce());
+
+//		StartCoroutine (deltaPos ());
 	}
 
-	public void addCollideCube(GameObject collideCube)
+	IEnumerator EnergyFill()
+	{
+		while (true) 
+		{
+			if(Energy>maxEnergy)
+				Energy=maxEnergy;
+			else
+			{
+				yield return null;
+				Energy += energyRecharge * Time.deltaTime;
+			}
+		}
+	}
+
+	public void addCollideCube(testJoint collideCube)
 	{
 		collideCubes.Add (collideCube);
 	}
-	
-	void Update () 
+	public void deleteCollideCube(testJoint collideCube)
 	{
-
+		collideCubes.Remove (collideCube);
 	}
+	
 	void TurnOnMagnet()
 	{
 		isMagnet = true;
 	}
-	void OnTriggerEnter(Collider col)
-	{
-		if (col.gameObject.name == "gate") 
-			Destroy (col.gameObject);
-	}
-	void FixedUpdate()
-	{
 
-//		Debug.Log ("Sphere Velocity:" + gameObject.GetComponent<Rigidbody> ().velocity);
+
+
+	void OnGUI()
+	{
+		GUI.Box (new Rect (10, 10, 100, 50), touchCoord.ToString());
+	}
+
+
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.CompareTag ("Terrain")) 
+		{
+			Debug.Log ("relativeVelocity"+collision.relativeVelocity);
+			if(collision.relativeVelocity.magnitude>cubeUnjointPower)
+			{
+
+				for(int i=0;i<collideCubes.Count;i++)
+				{
+					collideCubes[i].ExplJointBreak (-collision.relativeVelocity);
+					deleteCollideCube (collideCubes[i]);
+				}
+				Debug.Log ("Warning collision");
+			}
+		}
+	}
+
+
+
+	void Update()
+	{
+		Debug.Log ("Energy:" + Energy);
+		Debug.Log ("Sphere Velocity:" + sphereRB.velocity);
 
 		//max Velocity
-		if (gameObject.GetComponent<Rigidbody> ().velocity.magnitude > maxVelocity) 
+		if (sphereRB.velocity.magnitude > maxVelocity) {
+			Debug.Log ("Max magnitude:" + sphereRB.velocity.magnitude);
+			sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, maxVelocity);
+		} else 
 		{
-			Debug.Log("Magnitude"+gameObject.GetComponent<Rigidbody> ().velocity.magnitude);
-			gameObject.GetComponent<Rigidbody> ().velocity=Vector3.ClampMagnitude(gameObject.GetComponent<Rigidbody> ().velocity,maxVelocity);
-		//	gameObject.GetComponent<Rigidbody> ().AddForce (0, 0, forcePower);
+			sphereRB.AddForce (constVelocity, ForceMode.Force);
 		}
-		
-		float key;
-		if ((key = Input.GetAxis("Horizontal")) != 0) 
-		{
-			sphereRB.AddForce (HorizontalForce*key);
-		}
-		if ((key = Input.GetAxis("Vertical")) != 0) 
-		{
-			sphereRB.AddForce (VerticalForce*key);
-		}
-		if (Input.GetKeyDown (KeyCode.M))
-		{
-			isMagnet=false;
-/*			magnetZone = Physics.OverlapSphere(transform.position,magnetRadius);
-			magnetZone=System.Array.FindAll(magnetZone,(Collider item)
-			                                =>
-			                                {
-				if(item.gameObject.tag=="Cubes" && 
-				   item.GetComponent<SpringJoint>().connectedBody==gameObject.GetComponent<Rigidbody>())
-					return true;
-				else
-					return false;
-			});
-	*/		
-			collideCubes.ForEach(item=> 
-			                     {
-			                     item.GetComponent<Rigidbody>().useGravity=true;
-			                     item.GetComponent<SpringJoint>().spring=0;
-				item.GetComponent<SpringJoint>().connectedBody=null;});
 
-/*			foreach (var item in magnetZone) 
+
+		touchScan ();
+
+
+		if ((key = Input.GetAxis ("Horizontal")) != 0) {
+			sphereRB.AddForce (HorizontalForce * key);
+		}
+		if ((key = Input.GetAxis ("Vertical")) != 0) {
+			sphereRB.AddForce (VerticalForce * key);
+		}
+
+
+
+		if (Input.GetKeyDown (KeyCode.M)) 
+		{
+			if(Energy-magnetEnergyCost>0)
 			{
-				item.attachedRigidbody.useGravity=true;
-				item.GetComponent<SpringJoint>().spring=0;
-				item.GetComponent<SpringJoint>().connectedBody=null;
-			}*/
-			collideCubes.Clear ();
-			// TURN ON Sphere magnet til variable turnOffMagnetTime
-			Invoke ("TurnOnMagnet", turnOffMagnetTime);
+				Energy-=magnetEnergyCost;
+				if(collideCubes.Count>0 && isMagnet)
+					StartCoroutine (Demagnetized(false)	);
+			}
+			else
+			{
+				Debug.Log ("Not enought energy");
+			}
 		}
 
 		
 		if ((key = Input.GetAxis ("Jump")) != 0) 
 		{
-			collideCubes.ForEach(item=> 
-			                     {
-				item.GetComponent<Rigidbody>().useGravity=true;
-				item.GetComponent<SpringJoint>().connectedBody=null;
-				item.GetComponent<SpringJoint>().spring=0;
-				item.gameObject.GetComponent<CubesJoint>().stun_cube (stun_cube_time);
-				item.GetComponent<Rigidbody>().AddExplosionForce(explosivePower,transform.position,explosiveRadius);
-			});
-
-			collideCubes.Clear ();
-
-
-
-
-
-
-	/*		magnetZone = Physics.OverlapSphere (this.transform.position, magnetRadius);
-			
-			magnetZone=System.Array.FindAll(magnetZone,(Collider item)
-			                                =>
-			                                {
-				if(item.gameObject.tag=="Cubes" && item.gameObject.GetComponent<SpringJoint>())
-					return true;
-				else
-					return false;
-			});
-			
-			foreach (var item in magnetZone) 
+			if(Energy-explEnergyCost>0)
 			{
-				item.GetComponent<Rigidbody>().useGravity=true;
-				item.GetComponent<SpringJoint>().connectedBody=null;
-				item.GetComponent<SpringJoint>().spring=0;
-				item.gameObject.GetComponent<CubesJoint>().stun_cube (stun_cube_time);
-				item.attachedRigidbody.AddExplosionForce(explosivePower,this.gameObject.transform.position,explosiveRadius);
+				Energy-=explEnergyCost;
+
+			if(collideCubes.Count>0 && isMagnet)
+				StartCoroutine (Demagnetized(true)	);
 			}
-
-			collideCubes.Clear ();*/
+			else
+			{
+				Debug.Log ("Not enought energy");
+			}
 		}
-		
+	}
 
-		
-		if (isMagnet == true) 
+	IEnumerator Demagnetized(bool explosive)
+	{
+		isMagnet = false;
+		sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, 0);
+		sphereRB.angularVelocity = Vector3.ClampMagnitude (sphereRB.angularVelocity, 0);
+		if (explosive) 
 		{
-/*			magnetZone = Physics.OverlapSphere (this.transform.position, magnetRadius/3);
-			
-			
-			magnetZone=System.Array.FindAll(magnetZone,(Collider item)
-			                                =>
-			                                {
-				if(item.gameObject.tag=="Cubes" && item.GetComponent<CubesJoint>().isActive)
-					if(item.GetComponent<SpringJoint>()!=null && item.GetComponent<SpringJoint>().connectedBody==null)
-						return true;
-				else
-					return false;
-				else
-					return false;
-			});
-			
-			foreach (var item in magnetZone) 
-			{
-	//			item.GetComponent<CubesJoint>().collideCube (gameObject.GetComponent<Rigidbody>());
-				//				item.GetComponent<Rigidbody>().useGravity=false;
-				//				item.GetComponent<SpringJoint>().connectedBody=gameObject.GetComponent<Rigidbody>();
-				//				item.GetComponent<SpringJoint>().spring=1;
-				
-				
-				/*				direction=(transform.position-item.transform.position).normalized;
-				item.gameObject.GetComponent<Rigidbody>().velocity=direction * magnetPower;
-*///			}
-
-
-
-
-
-			magnetZone = Physics.OverlapSphere (this.transform.position, magnetRadius);
-			
-			
-			magnetZone=System.Array.FindAll(magnetZone,(Collider item)
-			                                =>
-			                                {
-				if(item.gameObject.tag=="Cubes" && item.GetComponent<CubesJoint>().isActive)
-					if(
-					//	item.GetComponent<SpringJoint>()!=null && 
-						item.GetComponent<SpringJoint>().connectedBody==null)
-						return true;
-					else
-						return false;
-				else
-					return false;
-			});
-			
-			foreach (var item in magnetZone) 
-			{
-
-//				item.GetComponent<CubesJoint>().magnetCube (gameObject.GetComponent<Rigidbody>());
-//				item.GetComponent<Rigidbody>().useGravity=false;
-//				item.GetComponent<SpringJoint>().connectedBody=gameObject.GetComponent<Rigidbody>();
-//				item.GetComponent<SpringJoint>().spring=1;
-
-
-				direction=(gameObject.transform.position-item.transform.position).normalized;
-//				Debug.Log ("sphere force direction"+direction * magnetPower);
-				item.GetComponent<Rigidbody>().velocity = direction * magnetPower;
-
-
-			}
-
-
-	/*		magnetZone=System.Array.FindAll(magnetZone,(Collider item)
-			                                =>
-			                                {
-				if(item.gameObject.tag=="Cubes" && item.GetComponent<CubesJoint>().isActive)
-					if(
-						//	item.GetComponent<SpringJoint>()!=null && 
-						item.GetComponent<SpringJoint>().connectedBody==null &&
-						(item.transform.position-transform.position).magnitude<colliderRadius
-						)
-						return true;
-				else
-					return false;
-				else
-					return false;
-			});
-
-			foreach (var item in magnetZone) 
-			{
-				item.GetComponent<CubesJoint>().collideCube (gameObject.GetComponent<Rigidbody>());
-			}
-
-
-			/*			for (int i=0; i<magnetZone.Length; i++) 
-			{
-				if ( magnetZone [i].gameObject.tag == "Cubes" && (magnetZone [i].gameObject.GetComponent<SpringJoint>().spring==0)) 
-				{
-					direction = (this.transform.position - magnetZone [i].transform.position).normalized;
-//					magnetZone [i].gameObject.GetComponent<Rigidbody> ().velocity = direction * magnetPower;
-					magnetZone [i].gameObject.GetComponent<Rigidbody> ().AddForce (direction * magnetPower);
-					Debug.Log ("Add Force to"+magnetZone[i].gameObject.name);
-				}
-			}*/
+			sphereRB.AddForce (Vector3.up * forcePower, ForceMode.Acceleration);
+			yield return new WaitForSeconds(.2f);
+			sphereRB.constraints = RigidbodyConstraints.FreezePosition;
 		}
-		
+		Debug.Log ("Cubes on sphere" + collideCubes.Count);
+		int cubesCount = collideCubes.Count;
+
+		yield return new WaitForSeconds(0.8f);
+
+		if (explosive)
+			sphereRB.constraints = RigidbodyConstraints.None;
+
+		int i = 0;
+
+		foreach (var item in collideCubes) 
+		{
+			if(!explosive)
+			{
+				if(i%(cubesCount/4)==0)
+				{
+					Debug.Log ("i:"+i);
+					yield return new WaitForSeconds(0.3f);
+				}
+				
+				item.breakJoint ();
+			}
+			else
+			{
+				yield return null;
+				item.ExplJointBreak (Vector3.zero);
+
+			}
+			i++;
+		}
+		collideCubes.Clear ();
+
+		// TURN ON Sphere magnet til variable turnOffMagnetTime
+		Invoke ("TurnOnMagnet", turnOffMagnetTime);
+
+	}
+
+	void touchScan()
+	{
+		if (Input.touchCount > 0) 
+		{
+			foreach (var touch in Input.touches) 
+			{
+				if (touch.phase == TouchPhase.Began)
+				if (touch.tapCount == 2)
+					StartCoroutine (Demagnetized (true));
+			}
+
+			if (Input.touchCount > 0 
+				&& (Input.touches [0].phase == TouchPhase.Moved)) {
+				playerTouch = Input.GetTouch (0).deltaPosition;
+				playerTouch.y = 0;
+				sphereRB.AddForce (playerTouch * forcePower);
+			}
+		}
 	}
 
 
+
+
+/*	IEnumerator touchControl(Touch touch)
+	{
+		yield return new WaitForEndOfFrame();
+		if(touch.position.x<Screen.width/2)
+			sphereRB.AddForce (-HorizontalForce);
+		else
+			if(touch.position.x>Screen.width/2)
+				sphereRB.AddForce (HorizontalForce);
+	}
+*/
 }

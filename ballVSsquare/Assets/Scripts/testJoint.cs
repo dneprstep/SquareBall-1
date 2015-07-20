@@ -1,28 +1,183 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class testJoint : MonoBehaviour {
 
-	SpringJoint hJoint;
-	// Use this for initialization
-	void Start () {
-		hJoint = gameObject.AddComponent<SpringJoint> ();
-		hJoint.connectedBody = GameObject.FindWithTag ("Player").gameObject.GetComponent<Rigidbody> ();
-		hJoint.spring = 10;
-		hJoint.maxDistance = 0.5f;
-		hJoint.autoConfigureConnectedAnchor = false;
-//		hJoint.anchor = GameObject.FindWithTag ("Player").transform.position;
+	public bool isActive;
+	public bool isJoint;
+	public bool isMagneted;
+
+	public float jointRadius;
+	public float stunTime;
+
+	public float speed;
+
+	public float explForce;
+	public float explosionRadius;
+
+
+	GameObject sphere;
+	Transform sphereTransform;
+	SphereControl sphereScript;
+	float sphereVelocity;
+
+	Vector3 cubeOrbit;
+	Vector3 direction;
+
+	Vector3 offset;
+
+	Rigidbody cubeRB;
+	Transform cubeTransorm;
+	Collider cubeCollider;
+
+	float distance;
+	Vector3 explDirection;
+
+
+	void Start () 
+	{
+		cubeOrbit = new Vector3 (0f, 1f, 1f);
+
+		sphere = GameObject.FindWithTag ("Player");
+		sphereTransform = sphere.transform;
+		sphereScript = GameObject.FindWithTag("Player").GetComponent<SphereControl> ();
+		sphereVelocity = sphere.GetComponent<Rigidbody> ().velocity.magnitude;
+
+		isJoint = false;
+		isMagneted = false;
+		isActive = true;
+
+		cubeRB = GetComponent<Rigidbody> ();
+		cubeTransorm = GetComponent<Transform> ();
+		cubeCollider = GetComponent<Collider> ();
+
+		Physics.IgnoreCollision (GetComponent<Collider> (), sphere.GetComponent<Collider> ());
+	}
+
+	void StunCube()
+	{
+		isActive = false;
+	}
 
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Update () 
+	{
+		if (isActive ) 
+		{
+			if (isMagneted && sphereScript.isMagnet)
+				StartCoroutine (Magnet ());
+
+//		if (isJoint) 
+//			StartCoroutine (CubeJoint ());
+
+		}
+
 	}
 
-	void FixedUpdate()
+	IEnumerator Magnet()
 	{
 
+		direction = sphereTransform.position - cubeTransorm.position;
+		distance = direction.sqrMagnitude;
+		if (distance <= jointRadius) 
+		{
+			inJointRadius();
+
+		} else 
+		{
+			direction.Normalize ();
+			cubeTransorm.Translate (direction * speed * Time.deltaTime);
+		}
+		yield return null;
+	}
+	void inJointRadius()
+	{
+		isMagneted = false;
+		cubeTransorm.SetParent (sphereTransform);
+
+		cubeRB.isKinematic = true;
+		cubeRB.detectCollisions = false;
+
+		isJoint = true;
+		sphereScript.addCollideCube (this);
+		Debug.Log ("Cube joint");
+	}
+
+	IEnumerator CubeJoint()
+	{
+		yield return null;
+	}
+
+
+
+
+
+	void OnTriggerEnter(Collider collider)
+	{
+		if (isActive) 
+		{
+			if (collider.gameObject.CompareTag ("Player") && sphereScript.isMagnet) {
+				OnMagnetToSphere ();
+			}
+		}
+	}
+	public void OnMagnetToSphere()
+	{
+		isMagneted=true;
+//		cubeRB.useGravity=false;
+		cubeRB.isKinematic = true;
+	}
+
+
+
+
+	void OnTriggerExit(Collider collider)
+	{
+		if (isActive) 
+		{
+			if (collider.gameObject.CompareTag ("Player")) 
+				OffMagnetToSphere ();
+		}
+	}
+	public void OffMagnetToSphere()
+	{
+		isJoint = false;
+		isMagneted = false;
+		cubeRB.isKinematic = false;
+//		cubeRB.useGravity = true;
+	}
+
+
+	public void breakJoint()
+	{
+		isJoint = false;
+		isMagneted = false;
+		isActive = false;
+		cubeTransorm.parent = null;
+
+		cubeRB.detectCollisions = true;
+		cubeRB.isKinematic = false;
+
+
+		cubeRB.useGravity = true;
+
+//		sphereScript.deleteCollideCube (this);
+//		Invoke ("StunCube", stunTime);
+	}
+
+	public void ExplJointBreak(Vector3 explDirection)
+	{
+		breakJoint ();
+
+		if (explDirection == Vector3.zero) 
+		{
+			Debug.Log ("Zero");
+			explDirection = cubeTransorm.position - sphereTransform.position;
+
+			explDirection.Normalize ();
+		}
+		cubeRB.AddForce(explDirection*(sphereVelocity+explForce),ForceMode.Impulse);
 	}
 }
