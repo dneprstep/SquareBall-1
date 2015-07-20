@@ -16,6 +16,11 @@ public class testJoint : MonoBehaviour {
 	public float explForce;
 	public float explosionRadius;
 
+	public Color defaultColor;
+	public Color deactiveColor;
+	public Color magnetColor;
+	public Color jointColor;
+	
 
 	GameObject sphere;
 	Transform sphereTransform;
@@ -30,6 +35,7 @@ public class testJoint : MonoBehaviour {
 	Rigidbody cubeRB;
 	Transform cubeTransorm;
 	Collider cubeCollider;
+	Material cubeMaterial;
 
 	float distance;
 	Vector3 explDirection;
@@ -51,6 +57,9 @@ public class testJoint : MonoBehaviour {
 		cubeRB = GetComponent<Rigidbody> ();
 		cubeTransorm = GetComponent<Transform> ();
 		cubeCollider = GetComponent<Collider> ();
+		cubeMaterial = GetComponent<MeshRenderer> ().material;
+
+		cubeMaterial.color = defaultColor;
 
 		Physics.IgnoreCollision (GetComponent<Collider> (), sphere.GetComponent<Collider> ());
 	}
@@ -69,8 +78,8 @@ public class testJoint : MonoBehaviour {
 			if (isMagneted && sphereScript.isMagnet)
 				StartCoroutine (Magnet ());
 
-//		if (isJoint) 
-//			StartCoroutine (CubeJoint ());
+		if (isJoint) 
+			StartCoroutine (CubeJoint ());
 
 		}
 
@@ -102,6 +111,9 @@ public class testJoint : MonoBehaviour {
 
 		isJoint = true;
 		sphereScript.addCollideCube (this);
+
+		cubeMaterial.color = jointColor;
+
 		Debug.Log ("Cube joint");
 	}
 
@@ -118,7 +130,8 @@ public class testJoint : MonoBehaviour {
 	{
 		if (isActive) 
 		{
-			if (collider.gameObject.CompareTag ("Player") && sphereScript.isMagnet) {
+			if (collider.gameObject.CompareTag ("Player") && sphereScript.isMagnet) 
+			{
 				OnMagnetToSphere ();
 			}
 		}
@@ -128,8 +141,9 @@ public class testJoint : MonoBehaviour {
 		isMagneted=true;
 //		cubeRB.useGravity=false;
 		cubeRB.isKinematic = true;
+		cubeMaterial.color = magnetColor;
 	}
-
+	
 
 
 
@@ -146,7 +160,9 @@ public class testJoint : MonoBehaviour {
 		isJoint = false;
 		isMagneted = false;
 		cubeRB.isKinematic = false;
-//		cubeRB.useGravity = true;
+
+		cubeMaterial.color=defaultColor;
+		//		cubeRB.useGravity = true;
 	}
 
 
@@ -163,6 +179,7 @@ public class testJoint : MonoBehaviour {
 
 		cubeRB.useGravity = true;
 
+		cubeMaterial.color = deactiveColor;
 //		sphereScript.deleteCollideCube (this);
 //		Invoke ("StunCube", stunTime);
 	}
