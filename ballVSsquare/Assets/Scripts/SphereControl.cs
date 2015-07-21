@@ -169,16 +169,6 @@ public class SphereControl : MonoBehaviour {
 //		Debug.Log ("Energy:" + Energy);
 //		Debug.Log ("Sphere Velocity:" + sphereRB.velocity);
 
-/*		//max Velocity
-		if (sphereRB.velocity.magnitude > maxVelocity) {
-			Debug.Log ("Max magnitude:" + sphereRB.velocity.magnitude);
-			sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, maxVelocity);
-		} else 
-		{
-			sphereRB.AddForce (constVelocity, ForceMode.Force);
-		}
-*/
-
 		touchScan ();
 
 

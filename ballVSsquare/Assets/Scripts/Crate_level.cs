@@ -6,11 +6,13 @@ public class Crate_level : MonoBehaviour {
 	public GameObject roadPrefab;
 	public GameObject enemyPrefab;
 	public GameObject cubePrefab;
+	public GameObject springBoard;
 
 
 	public Vector3 startPosition;
 	public float angle;
 	public int roadCount;
+	public int cubesCount;
 
 	List<GameObject> road;
 
@@ -94,16 +96,23 @@ public class Crate_level : MonoBehaviour {
 			if(i%4==0)
 			{
 				Vector2 tempEnemyPos2= Random.insideUnitCircle*5;
-				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y,tempPosition.z+tempEnemyPos2.y);
-				Instantiate (enemyPrefab, tempEnemyPos3, Quaternion.Euler (0,-90,0));
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+2,tempPosition.z+tempEnemyPos2.y);
+				Instantiate (enemyPrefab, tempEnemyPos3, Quaternion.Euler (0,Random.rotation.eulerAngles.y,0));
 			}
-			if(i%5==0)
+			if(i%6==0)
 			{
 				Vector2 tempEnemyPos2= Random.insideUnitCircle*6;
-				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+2f,tempPosition.z+tempEnemyPos2.y);
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+.5f,tempPosition.z+tempEnemyPos2.y);
+				Instantiate (springBoard, tempEnemyPos3, Quaternion.Euler (0,-90,0));
+			}
+			for(int j=0;j<cubesCount;j++)
+			{
+				Vector2 tempEnemyPos2= Random.insideUnitCircle*5;
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+.5f,tempPosition.z+tempEnemyPos2.y);
 				Instantiate (cubePrefab, tempEnemyPos3, Quaternion.identity);
 			}
 
+			
 			//			Instantiate (enemyPrefab, tempPosition+(new Vector3(0,30,0)), Quaternion.identity);
 		}
 
@@ -113,6 +122,25 @@ public class Crate_level : MonoBehaviour {
 
 		for (int i=0; i<roadCount; i++) {
 			tempPosition = AddRoad (roadPrefab, tempPosition, angle, directionVariables.setVar (rDirection.rightDown));
+			if(i%4==0)
+			{
+				Vector2 tempEnemyPos2= Random.insideUnitCircle*5;
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+2,tempPosition.z+tempEnemyPos2.y);
+				Instantiate (enemyPrefab, tempEnemyPos3, Quaternion.identity);
+			}
+			if(i%6==0)
+			{
+				Vector2 tempEnemyPos2= Random.insideUnitCircle*6;
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+.5f,tempPosition.z+tempEnemyPos2.y);
+				Instantiate (springBoard, tempEnemyPos3, Quaternion.Euler (angle,-90,0));
+			}
+			for(int j=0;j<cubesCount;j++)
+			{
+				Vector2 tempEnemyPos2= Random.insideUnitCircle*5;
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+.5f,tempPosition.z+tempEnemyPos2.y);
+				Instantiate (cubePrefab, tempEnemyPos3, Quaternion.identity);
+			}
+
 		}
 
 		for (int i=0; i<roadCount; i++) {
