@@ -27,10 +27,7 @@ public class testJoint : MonoBehaviour {
 	SphereControl sphereScript;
 	float sphereVelocity;
 
-	Vector3 cubeOrbit;
 	Vector3 direction;
-
-	Vector3 offset;
 
 	Rigidbody cubeRB;
 	Transform cubeTransorm;
@@ -41,9 +38,8 @@ public class testJoint : MonoBehaviour {
 	Vector3 explDirection;
 
 
-	void Start () 
+	void Start ()
 	{
-		cubeOrbit = new Vector3 (0f, 1f, 1f);
 
 		sphere = GameObject.FindWithTag ("Player");
 		sphereTransform = sphere.transform;

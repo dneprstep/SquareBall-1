@@ -6,10 +6,12 @@ public class CameraScript : MonoBehaviour {
 	public Transform lookAtObject;
 
 	private GameObject playerPos;
-//	private Vector3 offset;
+	private Vector3 offset;
 	private Vector3 velo=Vector3.zero;
 	private Vector3 min;
 
+
+	Rigidbody sphereRB;
 	void Start () 
 	{
 
@@ -26,6 +28,8 @@ public class CameraScript : MonoBehaviour {
 
 		transform.position = min;
 
+		sphereRB=playerPos.GetComponent<Rigidbody> ();
+
 
 	//	Debug.Log ("Position:" + transform.position + ": rotation" + transform.rotation);
 	}
@@ -34,10 +38,10 @@ public class CameraScript : MonoBehaviour {
 	void LateUpdate()
 	{
 
-		this.transform.position = lookAtObject.position + min;
+		transform.position = lookAtObject.position + min;
 
 
-//		transform.rotation.SetLookRotation (lookAtObject.GetComponent<Rigidbody> ().velocity);
+//		transform.rotation.SetLookRotation (sphereRB.velocity);
 	//	transform.RotateAround (lookAtObject.position, Vector3.up, 10*Time.deltaTime);
 	//	this.transform.LookAt (lookAtObject.position + lookAtObject.GetComponent<Rigidbody> ().velocity);
 	//	Vector3 rotat = new Vector3 ();
@@ -49,7 +53,7 @@ public class CameraScript : MonoBehaviour {
 	//	offset += min;
 
 	//	transform.position = Vector3.SmoothDamp (transform.position, lookAtObject.position+min, ref velo, 0.3f);
-//		transform.LookAt(Vector3.SmoothDamp (transform.position, lookAtObject.position, ref velo, 3f));
+	//	transform.LookAt(Vector3.SmoothDamp (transform.position, lookAtObject.position, ref velo, 3f));
 
 
 

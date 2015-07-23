@@ -2,51 +2,54 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class SphereControl : MonoBehaviour {
+public class SphereControl : MonoBehaviour 
+{
 	
-	Rigidbody sphereRB;
-
 	Vector3 HorizontalForce;
 	Vector3 VerticalForce;
 
 	public bool isMagnet;
+	public bool isActive;
 	public float turnOffMagnetTime;
 	public float forcePower;
 	public float maxVelocity;
 	public float cubeUnjointPower;
-
 
 	public Vector3 startPosition;
 	public Vector3 constVelocity;
 
 	public float energyRecharge;
 	public float maxEnergy;
+	public float Energy;
 
 	public float springBoardBoost;
 	public float veloBoostTime;
 
+	public float maxAngularVelocity;
+	public float cubeMass;
+
 	List<testJoint> collideCubes;
 
 
-	Vector3 explosivePos;
-	Rigidbody rb;
-
 	Transform sphereTransofrm;
+	Rigidbody sphereRB;
 
-	Vector2 touchCoord;
+	levelControl lvlC;
+	
 	Vector2 playerTouch;
 
 	float key;
 
 	bool isBoosted;
 
-	float Energy;
+
 
 	float magnetEnergyCost=30;
 	float explEnergyCost=50;
 
-
 	Vector3 tempVelocity;
+
+	float distanceToGround;
 
 	void Start () 
 	{
@@ -54,24 +57,29 @@ public class SphereControl : MonoBehaviour {
 		sphereRB = gameObject.GetComponent<Rigidbody> ();
 		sphereTransofrm = GetComponent<Transform> ();
 
+		lvlC = GameObject.FindObjectOfType<levelControl> ();
+
 		collideCubes = new List<testJoint> ();
 
 		HorizontalForce = new Vector3 (forcePower, 0.0f, 0.0f);
 		VerticalForce = new Vector3 (0.0f, 0.0f, forcePower);
 
 		GetComponent<MeshFilter> ().mesh.Optimize ();
-		sphereRB.AddForce(new Vector3(0,0,100),ForceMode.Force);
-		touchCoord = new Vector2 ();
 
+		sphereRB.AddForce(new Vector3(0,0,100),ForceMode.Force);
+
+//		cubeMass = GameObject.FindGameObjectWithTag ("Cubes").GetComponent<Rigidbody> ().mass;
+//		cubeMass = 20;
 
 		Energy = maxEnergy;
 		isBoosted = false;
+		isActive = false;
 
+		distanceToGround = GetComponent<Collider> ().bounds.extents.y+0.1f;
 
 		StartCoroutine ("EnergyFill");
 		StartCoroutine ("sphereConstForce");
 	}
-
 	IEnumerator EnergyFill()
 	{
 		while (true) 
@@ -96,20 +104,28 @@ public class SphereControl : MonoBehaviour {
 				sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, maxVelocity);
 			} else 
 			{
-				sphereRB.AddForce (constVelocity, ForceMode.Impulse);
+				if(IsGrounded () && isActive)
+					sphereRB.AddForce (constVelocity, ForceMode.Impulse);
 			}
 		}
+	}
 
+	bool IsGrounded()
+	{
+		return Physics.Raycast (transform.position, Vector3.down, distanceToGround);
 	}
 
 
 	public void addCollideCube(testJoint collideCube)
 	{
 		collideCubes.Add (collideCube);
+		sphereRB.mass += cubeMass;
 	}
 	public void deleteCollideCube(testJoint collideCube)
 	{
 		collideCubes.Remove (collideCube);
+		sphereRB.mass -= cubeMass;
+		Debug.Log ("mass remove:" + sphereRB.mass);
 	}
 	
 	void TurnOnMagnet()
@@ -117,16 +133,10 @@ public class SphereControl : MonoBehaviour {
 		isMagnet = true;
 	}
 
-	void OnGUI()
-	{
-		GUI.Box (new Rect (10, 10, 100, 50), touchCoord.ToString());
-	}
-
-
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.CompareTag ("Terrain")) 
+		if (collision.gameObject.CompareTag ("Environment")) 
 		{
 			Debug.Log ("relativeVelocity"+collision.relativeVelocity);
 			if(collision.relativeVelocity.magnitude>cubeUnjointPower)
@@ -138,7 +148,7 @@ public class SphereControl : MonoBehaviour {
 					deleteCollideCube (collideCubes[i]);
 				}
 				Debug.Log ("Warning collision");
-			}
+			} 
 		}
 
 
@@ -148,8 +158,8 @@ public class SphereControl : MonoBehaviour {
 			                
 			sphereRB.AddForce(sphereRB.velocity.normalized*forcePower*2,ForceMode.Impulse);
 			Debug.Log ("Boost");
-
 		}
+
 	}
 	IEnumerator VelocityBoost(float veloBoost)
 	{
@@ -168,18 +178,21 @@ public class SphereControl : MonoBehaviour {
 	{
 //		Debug.Log ("Energy:" + Energy);
 //		Debug.Log ("Sphere Velocity:" + sphereRB.velocity);
+//		Debug.Log ("SacelerateSphere:" + acelerateSphere.z);
 
-		touchScan ();
+		if (IsGrounded() && isActive) 
+		{
+			touchScan ();
 
 
-		if ((key = Input.GetAxis ("Horizontal")) != 0) {
-			sphereRB.AddForce (HorizontalForce * key);
+			if ((key = Input.GetAxis ("Horizontal")) != 0) {
+				sphereRB.AddForce (HorizontalForce * key);
+			}
+			if ((key = Input.GetAxis ("Vertical")) != 0) {
+				sphereRB.AddForce (VerticalForce * key);
+			}
+
 		}
-		if ((key = Input.GetAxis ("Vertical")) != 0) {
-			sphereRB.AddForce (VerticalForce * key);
-		}
-
-
 
 		if (Input.GetKeyDown (KeyCode.M)) 
 		{
@@ -216,7 +229,7 @@ public class SphereControl : MonoBehaviour {
 	{
 		isMagnet = false;
 		sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, 0);
-//		sphereRB.angularVelocity = Vector3.ClampMagnitude (sphereRB.angularVelocity, 0);
+		sphereRB.angularVelocity = Vector3.ClampMagnitude (sphereRB.angularVelocity, maxAngularVelocity);
 		if (explosive) 
 		{
 			sphereRB.AddForce (Vector3.up * forcePower, ForceMode.Acceleration);
@@ -227,7 +240,7 @@ public class SphereControl : MonoBehaviour {
 		}
 		Debug.Log ("Cubes on sphere" + collideCubes.Count);
 		int cubesCount = collideCubes.Count;
-		sphereRB.AddTorque(0,forcePower,0);
+
 		yield return new WaitForSeconds(0.8f);
 
 		int i = 0;
@@ -243,17 +256,21 @@ public class SphereControl : MonoBehaviour {
 				}
 				
 				item.breakJoint ();
+				sphereRB.mass -= cubeMass;
 			}
 			else
 			{
 				yield return null;
 				item.ExplJointBreak (Vector3.zero);
-
+				sphereRB.mass -= cubeMass;
 			}
 			i++;
 		}
-		if (explosive)
+		if (explosive) 
+		{
 			sphereRB.constraints = RigidbodyConstraints.None;
+			sphereRB.AddForce (HorizontalForce * key,ForceMode.Impulse);
+		}
 
 		collideCubes.Clear ();
 
@@ -282,17 +299,4 @@ public class SphereControl : MonoBehaviour {
 		}
 	}
 
-
-
-
-/*	IEnumerator touchControl(Touch touch)
-	{
-		yield return new WaitForEndOfFrame();
-		if(touch.position.x<Screen.width/2)
-			sphereRB.AddForce (-HorizontalForce);
-		else
-			if(touch.position.x>Screen.width/2)
-				sphereRB.AddForce (HorizontalForce);
-	}
-*/
 }
