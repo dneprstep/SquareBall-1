@@ -118,7 +118,7 @@ public class Crate_level : MonoBehaviour {
 			{
 				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-25,25);
 				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+1f,tempPosition.z+tempEnemyPos2.y);
-				GameObject temp=(GameObject) Instantiate (bonusesPrefab[Random.Range (0,bonusesPrefab.Length-1)], tempEnemyPos3, Quaternion.Euler (-90,0,0));
+				GameObject temp=(GameObject) Instantiate (bonusesPrefab[Random.Range (0,bonusesPrefab.Length-1)], tempEnemyPos3, Quaternion.Euler (0,90,0));
 				temp.GetComponentInChildren<Boosts>().setBoostDirection( Random.Range (1,5));
 			}
 			if(i%10==0)
