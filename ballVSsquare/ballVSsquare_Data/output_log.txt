@@ -5,6 +5,10 @@ Direct3D:
     Renderer: AMD Radeon HD 6450 (ID=0x6779)
     Vendor:   ATI
     VRAM:     1008 MB
+Default GameObject Tag: Finish already registered
+ 
+(Filename:  Line: 83)
+
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -16,1477 +20,1033 @@ Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\bal
 Loading C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.329 seconds
+- Completed reload, in  0.301 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\System.dll (this message is harmless)
-Position:(0.0, 4.0, -5.0): rotation(0.2, 0.0, 0.0, 1.0)
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2020 -> priority: 1 
-  Thread -> id: 22dc -> priority: 1 
-Cube Cube(Clone) in sphere trigger JOINT
+  Thread -> id: 2d80 -> priority: 1 
+  Thread -> id: 2320 -> priority: 1 
+time:100
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:99
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:98
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:97
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:96
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:95
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:94
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:93
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:92
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:91
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:90
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:89
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:88
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:87
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:86
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:85
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:84
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:83
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:82
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:101
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:100
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:99
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:98
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:97
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:96
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:95
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.02444
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06562
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.05969
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.05976
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.05982
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.05988
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09594
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06007
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06013
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06019
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06024
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.0603
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06035
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09709
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06053
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06058
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06063
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09777
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06079
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06084
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06088
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06093
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06098
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:94
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06378
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06583
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06802
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11921
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.07521
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.07773
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.07973
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08217
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08455
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08714
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09039
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09302
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09557
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.17393
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10007
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10067
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10127
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10186
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10244
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10301
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.18272
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10455
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10509
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10561
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10613
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10665
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10714
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.18996
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10849
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10896
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10943
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10988
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11033
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11077
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.1112
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11163
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11206
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11246
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.00487
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.22695
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11405
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:93
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11443
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.1148
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11517
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cubes on sphere100
+Max magnitude:25.23067
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.02146
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+Max magnitude:25.08594
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06437
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.07854
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09262
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.1066
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.12045
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.13417
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.36416
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.25277
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.41615
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.35357
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.3651
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.37629
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+Max magnitude:25.38716
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09797
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+Max magnitude:25.32876
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:92
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.05972
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09571
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.31356
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09599
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06186
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06287
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06386
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.05351
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.04333
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.03642
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.14237
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.14405
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.15176
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.04985
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.16066
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.16434
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:91
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:90
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:32.77907
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.27134
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:89
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+relativeVelocity(-2.1, 0.0, -12.4)
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:88
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:87
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:86
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:85
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:84
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:83
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:82
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:81
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:80
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08837
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.03052
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.22408
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08555
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08588
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.03221
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08653
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08686
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08718
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08749
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.0878
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08812
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.03442
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08872
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.23625
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08956
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.08986
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09015
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09043
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09071
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+Max magnitude:25.09099
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09127
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.09154
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.17442
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.03577
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.19369
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.06402
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.21733
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.22812
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.10526
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.11913
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.13285
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Max magnitude:25.27281
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:79
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:78
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:97
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:96
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:95
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:94
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+time:93
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:92
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:91
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube magneted
+time:90
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Not enought energy
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cubes on sphere20
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:89
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Zero
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:88
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:87
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:86
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:85
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:84
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+time:83
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-Cube Cube(Clone) in sphere trigger JOINT
+Cube joint
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
 
