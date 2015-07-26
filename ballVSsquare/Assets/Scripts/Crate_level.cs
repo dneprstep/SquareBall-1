@@ -10,6 +10,7 @@ public class Crate_level : MonoBehaviour {
 	public GameObject checkPointPrefab;
 	public GameObject finishPrefab;
 	public GameObject cubePrefab;
+	public GameObject bigMagnetPrefab;
 	
 
 
@@ -111,21 +112,28 @@ public class Crate_level : MonoBehaviour {
 					addCubes (tempPosition);
 				}
 			}
-			if(i%2==0)
+			if(i%5==0)
 			{
 				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-15,15);
 				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+5,tempPosition.z+tempEnemyPos2.y);
 				GameObject temp=(GameObject) Instantiate (environmentPrefab[Random.Range (0,environmentPrefab.Length-1)], tempEnemyPos3, Quaternion.Euler (0,Random.rotation.eulerAngles.y,0));
 			}
-			if(i%1==0)
+
+			if(i%2==0)
+			{
+				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-15,15);
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+3,tempPosition.z+tempEnemyPos2.y);
+				GameObject temp=(GameObject) Instantiate (bigMagnetPrefab, tempEnemyPos3, Quaternion.Euler (0,Random.rotation.eulerAngles.y,0));
+			}
+			if(i%2==0)
 			{
 				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-(XCuberandom-3),(XCuberandom-3));
-				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+2f,tempPosition.z+tempEnemyPos2.y);
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+3f,tempPosition.z+tempEnemyPos2.y);
 				GameObject temp=(GameObject) Instantiate (bonusesPrefab[Random.Range (0,bonusesPrefab.Length-1)], tempEnemyPos3, Quaternion.Euler (0,90,0));
 			}
 			if(i%10==0)
 			{
-				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-25,25);
+				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-20,20);
 				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y-1,tempPosition.z+tempEnemyPos2.y);
 				Instantiate (checkPointPrefab, tempEnemyPos3, Quaternion.identity);
 			}
