@@ -279,7 +279,7 @@ public class SphereControl : MonoBehaviour
 		{
 			if(!explosive)
 			{
-				if(i%(cubesCount/4)==0)
+//				if(i%(cubesCount/4)==0)
 				{
 //					Debug.Log ("i:"+i);
 					yield return new WaitForSeconds(0.15f);
