@@ -19,12 +19,11 @@ public class checkPoint : MonoBehaviour {
 		{
 			cpCollider.enabled=false;
 			lvlC.OvercomeCheckPoint();
+			if(CompareTag ("Finish"))
+			{
+				cpCollider.enabled=false;
+				lvlC.Complete();
+			}
 		}
-		if (collision.gameObject.CompareTag ("Finish")) 
-		{
-			cpCollider.enabled=false;
-			lvlC.Complete();
-		}
-
 	}
 }

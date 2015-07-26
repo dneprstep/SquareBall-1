@@ -18,7 +18,7 @@ public class CameraScript : MonoBehaviour {
 		playerPos = GameObject.FindWithTag ("Player");
 //		offset = new Vector3 ();
 		min = new Vector3 ();
-		min.Set (0, 4, -5);
+		min.Set (0, 4, -4);
 
 
 //		lookAtObject = GameObject.FindWithTag ("Player").GetComponent<Transform> ();
@@ -38,10 +38,10 @@ public class CameraScript : MonoBehaviour {
 	void LateUpdate()
 	{
 
-		transform.position = lookAtObject.position + min;
+//		transform.position = lookAtObject.position + min;
 
 
-//		transform.rotation.SetLookRotation (sphereRB.velocity);
+	//	transform.rotation.SetLookRotation (sphereRB.velocity);
 	//	transform.RotateAround (lookAtObject.position, Vector3.up, 10*Time.deltaTime);
 	//	this.transform.LookAt (lookAtObject.position + lookAtObject.GetComponent<Rigidbody> ().velocity);
 	//	Vector3 rotat = new Vector3 ();
@@ -52,8 +52,8 @@ public class CameraScript : MonoBehaviour {
 
 	//	offset += min;
 
-	//	transform.position = Vector3.SmoothDamp (transform.position, lookAtObject.position+min, ref velo, 0.3f);
-	//	transform.LookAt(Vector3.SmoothDamp (transform.position, lookAtObject.position, ref velo, 3f));
+		transform.position = Vector3.SmoothDamp (transform.position, lookAtObject.position+min, ref velo, 0.3f);
+//		transform.LookAt(Vector3.SmoothDamp ( lookAtObject.position,sphereRB.velocity, ref velo, 1f));
 
 
 

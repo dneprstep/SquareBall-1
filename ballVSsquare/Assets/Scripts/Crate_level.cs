@@ -85,14 +85,20 @@ public class Crate_level : MonoBehaviour {
 		}
 	}
 
+	float XCuberandom;
+	float YCubemax;
+	float ZCuberandom;
+
 	void Start () 
 	{
-
-		road = new List<GameObject> ();
-
 		Vector3 tempPosition=startPosition;
-
+		road = new List<GameObject> ();
 		tempPosition = AddRoad (roadPrefab[0], tempPosition, angle, directionVariables.setVar (rDirection.right));
+
+		XCuberandom=road[road.Count-1].GetComponentInChildren<Collider>().bounds.extents.x-3f;
+		YCubemax=road[road.Count-1].GetComponentInChildren<Collider>().bounds.max.y;
+		ZCuberandom=road[road.Count-1].GetComponentInChildren<Collider>().bounds.extents.z;
+
 
 		for (int i=0; i<roadCount; i++) 
 		{
@@ -102,11 +108,8 @@ public class Crate_level : MonoBehaviour {
 				tempPosition = AddRoad (roadPrefab[0], tempPosition, angle, directionVariables.setVar (rDirection.right));
 				for(int j=0;j<cubesCount;j++)
 				{
-					Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-20,20);
-					Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+5f,tempPosition.z+tempEnemyPos2.y);
-					Instantiate (cubePrefab, tempEnemyPos3, Quaternion.identity);
+					addCubes (tempPosition);
 				}
-
 			}
 			if(i%2==0)
 			{
@@ -114,27 +117,22 @@ public class Crate_level : MonoBehaviour {
 				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+5,tempPosition.z+tempEnemyPos2.y);
 				GameObject temp=(GameObject) Instantiate (environmentPrefab[Random.Range (0,environmentPrefab.Length-1)], tempEnemyPos3, Quaternion.Euler (0,Random.rotation.eulerAngles.y,0));
 			}
-			if(i%6==0)
+			if(i%1==0)
 			{
-				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-25,25);
-				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+1f,tempPosition.z+tempEnemyPos2.y);
+				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-(XCuberandom-3),(XCuberandom-3));
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+2f,tempPosition.z+tempEnemyPos2.y);
 				GameObject temp=(GameObject) Instantiate (bonusesPrefab[Random.Range (0,bonusesPrefab.Length-1)], tempEnemyPos3, Quaternion.Euler (0,90,0));
-				temp.GetComponentInChildren<Boosts>().setBoostDirection( Random.Range (1,5));
 			}
 			if(i%10==0)
 			{
 				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-25,25);
-				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y-2,tempPosition.z+tempEnemyPos2.y);
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y-1,tempPosition.z+tempEnemyPos2.y);
 				Instantiate (checkPointPrefab, tempEnemyPos3, Quaternion.identity);
 			}
 			for(int j=0;j<cubesCount;j++)
 			{
-				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-20,20);
-				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+5f,tempPosition.z+tempEnemyPos2.y);
-				Instantiate (cubePrefab, tempEnemyPos3, Quaternion.identity);
+				addCubes (tempPosition);
 			}
-
-
 		}
 
 		Instantiate (finishPrefab, tempPosition, Quaternion.identity);
@@ -142,6 +140,16 @@ public class Crate_level : MonoBehaviour {
 		AddRoad (roadPrefab[0], tempPosition, angle, directionVariables.setVar (rDirection.right));
 
 	}
+
+
+	private void addCubes(Vector3 position)
+	{
+		Vector3 tempCubePosition=new Vector3(Random.Range (-XCuberandom,XCuberandom), YCubemax, position.z + Random.Range (-ZCuberandom,ZCuberandom ));
+		
+		GameObject tempCube =(GameObject) Instantiate (cubePrefab, tempCubePosition, Quaternion.identity);
+	}
+
+
 	private Vector3 AddRoad (GameObject prefab, Vector3 position, float angle, directionVariables direction)
 	{
 		Vector3 tempPosition=position;	

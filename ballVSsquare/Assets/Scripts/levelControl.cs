@@ -39,7 +39,7 @@ public class levelControl : MonoBehaviour {
 		while (currentTime>0) 
 		{
 			yield return new WaitForSeconds(1f);
-			Debug.Log("time:"+currentTime);
+//			Debug.Log("time:"+currentTime);
 			currentTime--;
 		}
 		EndGame ();

@@ -34,11 +34,13 @@ public class Boosts : MonoBehaviour
 		sphereScript = controlObject.GetComponent<SphereControl> ();
 		forceDirection = Vector3.zero;
 		isActive = true;
+
+		setBoostDirection( Random.Range (1,5));
 	}
 
 	void OnTriggerEnter(Collider collision)
 	{
-		if (isActive && collision.CompareTag ("Player")) 
+		if (isActive && collision.CompareTag ("Player"))
 		{
 			isActive=false;
 			StartCoroutine (onBoostCollision());

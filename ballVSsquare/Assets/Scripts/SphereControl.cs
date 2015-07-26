@@ -42,6 +42,8 @@ public class SphereControl : MonoBehaviour
 
 	bool isBoosted;
 
+	float velocityPogreshnost;
+
 
 
 	float magnetEnergyCost=30;
@@ -53,6 +55,8 @@ public class SphereControl : MonoBehaviour
 
 	void Start () 
 	{
+		velocityPogreshnost = 0.5f;
+
 		transform.position = startPosition;
 		sphereRB = gameObject.GetComponent<Rigidbody> ();
 		sphereTransofrm = GetComponent<Transform> ();
@@ -67,9 +71,6 @@ public class SphereControl : MonoBehaviour
 		GetComponent<MeshFilter> ().mesh.Optimize ();
 
 		sphereRB.AddForce(new Vector3(0,0,100),ForceMode.Force);
-
-//		cubeMass = GameObject.FindGameObjectWithTag ("Cubes").GetComponent<Rigidbody> ().mass;
-//		cubeMass = 20;
 
 		Energy = maxEnergy;
 		isBoosted = false;
@@ -97,10 +98,10 @@ public class SphereControl : MonoBehaviour
 	{
 		while (true) 
 		{
-			yield return null;
+			yield return new WaitForSeconds(.1f);
 			if (sphereRB.velocity.magnitude > maxVelocity) 
 			{
-				Debug.Log ("Max magnitude:" + sphereRB.velocity.magnitude);
+//				Debug.Log ("Max magnitude:" + sphereRB.velocity.magnitude);
 				sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, maxVelocity);
 			} else 
 			{
@@ -128,17 +129,28 @@ public class SphereControl : MonoBehaviour
 		Debug.Log ("mass remove:" + sphereRB.mass);
 	}
 	
-	void TurnOnMagnet()
+	public void TurnOffMagnet()
 	{
+		StartCoroutine (TurnOffMagnetTillTime ());
+	}
+	IEnumerator TurnOffMagnetTillTime()
+	{
+		isMagnet = false;
+		yield return new WaitForSeconds (turnOffMagnetTime);
 		isMagnet = true;
 	}
 
 
+
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.CompareTag ("Environment")) 
+		StartCoroutine (collisionCheck(-collision.relativeVelocity));
+
+/*		if (collision.gameObject.CompareTag ("Plane")) 
 		{
+
 			Debug.Log ("relativeVelocity"+collision.relativeVelocity);
+
 			if(collision.relativeVelocity.magnitude>cubeUnjointPower)
 			{
 
@@ -150,17 +162,29 @@ public class SphereControl : MonoBehaviour
 				Debug.Log ("Warning collision");
 			} 
 		}
+*/	}
+	IEnumerator collisionCheck(Vector3 collision)
+	{
+		Vector3 oldVelocity = sphereRB.velocity;
+		yield return new WaitForSeconds (.15f);
+		Vector3 newVelocity = sphereRB.velocity;
 
-
-		if (collision.gameObject.name == "BoostQuad" && !isBoosted) 
+		if (newVelocity.magnitude + velocityPogreshnost < oldVelocity.magnitude) 
 		{
-			StartCoroutine (VelocityBoost(springBoardBoost));
-			                
-			sphereRB.AddForce(sphereRB.velocity.normalized*forcePower*2,ForceMode.Impulse);
-			Debug.Log ("Boost");
-		}
+			Debug.Log ("oldVelocity"+oldVelocity);
+			Debug.Log ("newVelocity"+newVelocity);
+			for(int i=0;i<collideCubes.Count;i++)
+			{
+				collideCubes[i].ExplJointBreak (-collision);
+				deleteCollideCube (collideCubes[i]);
+			}
 
+			Debug.Log ("Warning collision");
+		}
 	}
+
+
+
 	IEnumerator VelocityBoost(float veloBoost)
 	{
 		isBoosted = true;
@@ -179,58 +203,63 @@ public class SphereControl : MonoBehaviour
 //		Debug.Log ("Energy:" + Energy);
 //		Debug.Log ("Sphere Velocity:" + sphereRB.velocity);
 //		Debug.Log ("SacelerateSphere:" + acelerateSphere.z);
-
-		if (IsGrounded() && isActive) 
+		if (isActive) 
 		{
-			touchScan ();
-
-
-			if ((key = Input.GetAxis ("Horizontal")) != 0) {
-				sphereRB.AddForce (HorizontalForce * key);
-			}
-			if ((key = Input.GetAxis ("Vertical")) != 0) {
-				sphereRB.AddForce (VerticalForce * key);
-			}
-
-		}
-
-		if (Input.GetKeyDown (KeyCode.M)) 
-		{
-			if(Energy-magnetEnergyCost>0)
+			if (IsGrounded ()) 
 			{
-				Energy-=magnetEnergyCost;
-				if(collideCubes.Count>0 && isMagnet)
-					StartCoroutine (Demagnetized(false)	);
+				touchScan ();
+
+
+				if ((key = Input.GetAxis ("Horizontal")) != 0) {
+					sphereRB.AddForce (HorizontalForce * key);
+				}
+				if ((key = Input.GetAxis ("Vertical")) != 0) {
+					sphereRB.AddForce (VerticalForce * key);
+				}
+
 			}
-			else
-			{
-				Debug.Log ("Not enought energy");
+
+			if (Input.GetKeyDown (KeyCode.M)) {
+				if (Energy - magnetEnergyCost > 0) 
+				{
+					Energy -= magnetEnergyCost;
+					if(isMagnet)
+					{	
+						isMagnet=false;
+						if (collideCubes.Count > 0)
+							StartCoroutine (Demagnetized (false));
+					}
+				} else 
+				{
+					Debug.Log ("Not enought energy");
+				}
+				
 			}
-		}
 
 		
-		if ((key = Input.GetAxis ("Jump")) != 0) 
-		{
-			if(Energy-explEnergyCost>0)
+			if ((key = Input.GetAxis ("Jump")) != 0) 
 			{
-				Energy-=explEnergyCost;
-
-			if(collideCubes.Count>0 && isMagnet)
-				StartCoroutine (Demagnetized(true)	);
-			}
-			else
-			{
-				Debug.Log ("Not enought energy");
+				if (Energy - explEnergyCost > 0) {
+					Energy -= explEnergyCost;
+					if(isMagnet)
+					{	
+						isMagnet=false;
+						if (collideCubes.Count > 0)
+							StartCoroutine (Demagnetized (true));
+					}
+				} else {
+					Debug.Log ("Not enought energy");
+				}
 			}
 		}
 	}
 
 	IEnumerator Demagnetized(bool explosive)
 	{
-		isMagnet = false;
+		Debug.Log ("Magnet:" + isMagnet.ToString ());
 		sphereRB.velocity = Vector3.ClampMagnitude (sphereRB.velocity, 0);
 		sphereRB.angularVelocity = Vector3.ClampMagnitude (sphereRB.angularVelocity, maxAngularVelocity);
-		if (explosive) 
+		if (explosive)
 		{
 			sphereRB.AddForce (Vector3.up * forcePower, ForceMode.Acceleration);
 
@@ -245,14 +274,14 @@ public class SphereControl : MonoBehaviour
 
 		int i = 0;
 
-		foreach (var item in collideCubes) 
+		foreach (var item in collideCubes)
 		{
 			if(!explosive)
 			{
 				if(i%(cubesCount/4)==0)
 				{
-					Debug.Log ("i:"+i);
-					yield return new WaitForSeconds(0.3f);
+//					Debug.Log ("i:"+i);
+					yield return new WaitForSeconds(0.15f);
 				}
 				
 				item.breakJoint ();
@@ -275,7 +304,8 @@ public class SphereControl : MonoBehaviour
 		collideCubes.Clear ();
 
 		// TURN ON Sphere magnet til variable turnOffMagnetTime
-		Invoke ("TurnOnMagnet", turnOffMagnetTime);
+		TurnOffMagnet ();
+//		Invoke ("TurnOffMagnetTillTime", turnOffMagnetTime);
 
 	}
 

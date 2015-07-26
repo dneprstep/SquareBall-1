@@ -13,14 +13,12 @@ public class testJoint : MonoBehaviour {
 
 	public float speed;
 
-	public float explForce;
-	public float explosionRadius;
+	public float explForce; 
 
 	public Color defaultColor;
 	public Color deactiveColor;
 	public Color magnetColor;
 	public Color jointColor;
-	
 
 	GameObject sphere;
 	Transform sphereTransform;
@@ -36,7 +34,6 @@ public class testJoint : MonoBehaviour {
 
 	float distance;
 	Vector3 explDirection;
-
 
 	void Start ()
 	{
@@ -58,6 +55,7 @@ public class testJoint : MonoBehaviour {
 		cubeMaterial.color = defaultColor;
 
 		Physics.IgnoreCollision (GetComponent<Collider> (), sphere.GetComponent<Collider> ());
+
 	}
 
 	void StunCube()
@@ -69,13 +67,14 @@ public class testJoint : MonoBehaviour {
 
 	void Update () 
 	{
+
 		if (isActive ) 
 		{
 			if (isMagneted && sphereScript.isMagnet)
 				StartCoroutine (Magnet ());
 
-		if (isJoint) 
-			StartCoroutine (CubeJoint ());
+			if (isJoint) 
+				StartCoroutine (CubeJoint ());
 
 		}
 
@@ -110,16 +109,13 @@ public class testJoint : MonoBehaviour {
 
 		cubeMaterial.color = jointColor;
 
-		Debug.Log ("Cube joint");
+//		Debug.Log ("Cube joint");
 	}
 
 	IEnumerator CubeJoint()
 	{
 		yield return null;
 	}
-
-
-
 
 
 	void OnTriggerEnter(Collider collider)
@@ -155,7 +151,8 @@ public class testJoint : MonoBehaviour {
 	{
 		isJoint = false;
 		isMagneted = false;
-		cubeRB.isKinematic = false;
+//		cubeRB.useGravity = true;
+//		cubeRB.isKinematic = false;
 
 		cubeMaterial.color=defaultColor;
 		//		cubeRB.useGravity = true;
@@ -193,4 +190,5 @@ public class testJoint : MonoBehaviour {
 		}
 		cubeRB.AddForce(explDirection*(sphereVelocity+explForce),ForceMode.Impulse);
 	}
+
 }
