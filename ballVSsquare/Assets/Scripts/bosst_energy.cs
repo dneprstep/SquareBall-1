@@ -18,6 +18,7 @@ public class bosst_energy : MonoBehaviour
 	{
 		if (isActive && collision.CompareTag ("Player")) 
 		{
+			Debug.Log("Energy+");
 			isActive=false;
 			onBoostCollision();
 		}

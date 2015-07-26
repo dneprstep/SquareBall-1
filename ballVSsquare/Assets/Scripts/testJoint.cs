@@ -128,6 +128,8 @@ public class testJoint : MonoBehaviour {
 			}
 		}
 	}
+
+
 	public void OnMagnetToSphere()
 	{
 		isMagneted=true;

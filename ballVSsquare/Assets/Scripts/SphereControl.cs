@@ -42,7 +42,7 @@ public class SphereControl : MonoBehaviour
 
 	bool isBoosted;
 
-	float velocityPogreshnost;
+	public float velocityPogreshnost;
 
 
 
@@ -55,7 +55,6 @@ public class SphereControl : MonoBehaviour
 
 	void Start () 
 	{
-		velocityPogreshnost = 0.5f;
 
 		transform.position = startPosition;
 		sphereRB = gameObject.GetComponent<Rigidbody> ();
@@ -226,6 +225,7 @@ public class SphereControl : MonoBehaviour
 					if(isMagnet)
 					{	
 						isMagnet=false;
+						TurnOffMagnet ();
 						if (collideCubes.Count > 0)
 							StartCoroutine (Demagnetized (false));
 					}
@@ -244,6 +244,7 @@ public class SphereControl : MonoBehaviour
 					if(isMagnet)
 					{	
 						isMagnet=false;
+						TurnOffMagnet ();
 						if (collideCubes.Count > 0)
 							StartCoroutine (Demagnetized (true));
 					}
@@ -270,7 +271,7 @@ public class SphereControl : MonoBehaviour
 		Debug.Log ("Cubes on sphere" + collideCubes.Count);
 		int cubesCount = collideCubes.Count;
 
-		yield return new WaitForSeconds(0.8f);
+//		yield return new WaitForSeconds(0.8f);
 
 		int i = 0;
 
@@ -304,7 +305,7 @@ public class SphereControl : MonoBehaviour
 		collideCubes.Clear ();
 
 		// TURN ON Sphere magnet til variable turnOffMagnetTime
-		TurnOffMagnet ();
+//		TurnOffMagnet ();
 //		Invoke ("TurnOffMagnetTillTime", turnOffMagnetTime);
 
 	}
