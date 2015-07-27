@@ -48,6 +48,7 @@ public class gui : MonoBehaviour
 			GUI.Box (endGameRect,"GAME OVER");
 			if(GUI.Button(restartGameRect,"Restart"))
 				Application.LoadLevel ("18_07_15");
+
 			if(GUI.Button(exitGameRect,"EXIT"))
 				Application.Quit ();
 
@@ -58,6 +59,7 @@ public class gui : MonoBehaviour
 			GUI.Box (endGameRect,"FINISH");
 			if(GUI.Button(restartGameRect,"Restart"))
 				Application.LoadLevel ("18_07_15");
+
 			if(GUI.Button(exitGameRect,"EXIT"))
 				Application.Quit ();
 		}

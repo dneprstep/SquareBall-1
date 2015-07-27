@@ -48,9 +48,11 @@ public class levelControl : MonoBehaviour {
 	public void EndGame ()
 	{
 		guiScript.window = 2;
+		Time.timeScale = 0;
 	}
 	public void Complete ()
 	{
 		guiScript.window = 1;
+		Time.timeScale = 0;
 	}
 }
