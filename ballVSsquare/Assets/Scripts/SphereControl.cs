@@ -141,11 +141,11 @@ public class SphereControl : MonoBehaviour
 
 
 
-	void OnCollisionEnter(Collision collision)
+/*	void OnCollisionEnter(Collision collision)
 	{
-		StartCoroutine (collisionCheck(-collision.relativeVelocity));
+//		StartCoroutine (collisionCheck(-collision.relativeVelocity));
 
-/*		if (collision.gameObject.CompareTag ("Plane")) 
+		if (collision.gameObject.CompareTag ("Plane")) 
 		{
 
 			Debug.Log ("relativeVelocity"+collision.relativeVelocity);
@@ -161,7 +161,7 @@ public class SphereControl : MonoBehaviour
 				Debug.Log ("Warning collision");
 			} 
 		}
-*/	}
+	}
 	IEnumerator collisionCheck(Vector3 collision)
 	{
 		Vector3 oldVelocity = sphereRB.velocity;
@@ -181,7 +181,7 @@ public class SphereControl : MonoBehaviour
 			Debug.Log ("Warning collision");
 		}
 	}
-
+*/
 
 
 	IEnumerator VelocityBoost(float veloBoost)

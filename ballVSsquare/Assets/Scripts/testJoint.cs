@@ -190,7 +190,7 @@ public class testJoint : MonoBehaviour {
 
 			explDirection.Normalize ();
 		}
-		cubeRB.AddForce(explDirection*(sphereVelocity),ForceMode.Impulse);
+		cubeRB.AddForce(explDirection*(sphereVelocity+explForce),ForceMode.Impulse);
 	}
 
 }

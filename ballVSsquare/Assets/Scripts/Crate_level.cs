@@ -109,16 +109,26 @@ public class Crate_level : MonoBehaviour {
 				for(int j=0;j<cubesCount;j++)
 				{
 					addCubes (tempPosition);
+					if(j%8==0)
+					{
+						Vector3 tempMagnetPosition=new Vector3(Random.Range (-(XCuberandom-10),XCuberandom-10), tempPosition.y+3f, tempPosition.z + Random.Range (-ZCuberandom,ZCuberandom ));
+						GameObject temp=(GameObject) Instantiate (bigMagnetPrefab, tempMagnetPosition, Quaternion.Euler (0,Random.rotation.eulerAngles.y,0));
+					}
 				}
 
 				tempPosition = AddRoad (roadPrefab[0], tempPosition, angle, directionVariables.setVar (rDirection.right));
 			}
 
-			if(i%2==0)
+			for(int j=0;j<cubesCount/10;j++)
 			{
-				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-15,15);
-				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+2,tempPosition.z+tempEnemyPos2.y);
-				GameObject temp=(GameObject) Instantiate (bigMagnetPrefab, tempEnemyPos3, Quaternion.Euler (0,Random.rotation.eulerAngles.y,0));
+				Vector3 tempMagnetPosition=new Vector3(Random.Range (-(XCuberandom-10),XCuberandom-10), tempPosition.y+3f, tempPosition.z + Random.Range (-ZCuberandom,ZCuberandom ));
+				GameObject temp=(GameObject) Instantiate (bigMagnetPrefab, tempMagnetPosition, Quaternion.Euler (0,Random.rotation.eulerAngles.y,0));
+			}
+			if(i%1==0)
+			{
+				Vector2 tempEnemyPos2= Random.insideUnitCircle* Random.Range(-(XCuberandom-3),(XCuberandom-3));
+				Vector3 tempEnemyPos3=new Vector3(tempEnemyPos2.x,tempPosition.y+3f,tempPosition.z+tempEnemyPos2.y);
+				GameObject temp=(GameObject) Instantiate (bonusesPrefab[0], tempEnemyPos3, Quaternion.Euler (0,90,0));
 			}
 			if(i%2==0)
 			{
