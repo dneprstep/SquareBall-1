@@ -145,7 +145,7 @@ public class Crate_level : MonoBehaviour {
 			for(int j=0;j<cubesCount;j++)
 			{
 				addCubes (tempPosition);
-				if(i%3==0)
+				if(i%5==0)
 				{
 					Vector3 tempCubePosition=new Vector3(Random.Range (-(XCuberandom+10),XCuberandom-10), YCubemax, tempPosition.z + Random.Range (-ZCuberandom,ZCuberandom ));
 
