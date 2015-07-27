@@ -5,13 +5,11 @@ Direct3D:
     Renderer: AMD Radeon HD 6450 (ID=0x6779)
     Vendor:   ATI
     VRAM:     1008 MB
-Default GameObject Tag: Finish already registered
- 
-(Filename:  Line: 83)
-
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.UI.dll (this message is harmless)
@@ -20,7 +18,7 @@ Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\bal
 Loading C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.090 seconds
+- Completed reload, in  0.095 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -28,45 +26,5 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Admin\Documents\GitHub\SquareBall-1\ballVSsquare\ballVSsquare_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: f8c -> priority: 1 
-  Thread -> id: 2f74 -> priority: 1 
-time:100
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:99
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:98
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:97
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:96
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:95
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:94
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:93
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:92
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
-time:91
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
-
+  Thread -> id: 20f8 -> priority: 1 
+  Thread -> id: 10a8 -> priority: 1 

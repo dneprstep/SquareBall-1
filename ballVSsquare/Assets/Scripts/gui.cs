@@ -8,7 +8,9 @@ public class gui : MonoBehaviour
 	Rect barRect;
 	Rect timeRect;
 	Rect endGameRect;
-
+	Rect restartGameRect;
+	Rect exitGameRect;
+	
 	GUIStyle barStyle;
 	
 	float Energy;
@@ -27,7 +29,9 @@ public class gui : MonoBehaviour
 		barStyle.normal.background = MakeTex (10,10,new Color(0.1f,0.1f,1,.5f));
 
 		timeRect = new Rect ((Screen.width / 2)+25, 45, 50, 20);
-		endGameRect = new Rect (5, 10, Screen.width - 10, Screen.height - 20);
+		endGameRect = new Rect (Screen.width/2-50, Screen.height/2 - 20,100,40);
+		exitGameRect = new Rect (Screen.width / 2 - 50, Screen.height / 2 + 100, 100, 40);
+		restartGameRect=new Rect(Screen.width / 2 - 50, Screen.height / 2 + 40, 100, 40);
 	}
 	
 	void OnGUI()
@@ -42,11 +46,20 @@ public class gui : MonoBehaviour
 		if (window == 2) 
 		{
 			GUI.Box (endGameRect,"GAME OVER");
+			if(GUI.Button(restartGameRect,"Restart"))
+				Application.LoadLevel ("18_07_15");
+			if(GUI.Button(exitGameRect,"EXIT"))
+				Application.Quit ();
+
 		}
 
 		if (window == 1) 
 		{
 			GUI.Box (endGameRect,"FINISH");
+			if(GUI.Button(restartGameRect,"Restart"))
+				Application.LoadLevel ("18_07_15");
+			if(GUI.Button(exitGameRect,"EXIT"))
+				Application.Quit ();
 		}
 
 
